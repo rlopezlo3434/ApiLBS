@@ -113,7 +113,7 @@ exports.obtenerPEA_NOPEA = (req, res) => {
 
   const queryPEA = `
     SELECT * 
-    FROM BD_CENSO 
+    FROM bd_censo 
     WHERE distrito = CONCAT('DISTRITO ', ?) 
       AND contexto = 'PEA' 
     LIMIT 3
@@ -121,7 +121,7 @@ exports.obtenerPEA_NOPEA = (req, res) => {
 
   const queryNoPEA = `
     SELECT *
-    FROM BD_CENSO 
+    FROM bd_censo 
     WHERE distrito = CONCAT('DISTRITO ', ?) 
       AND contexto = 'NO PEA'
     LIMIT 3
@@ -129,7 +129,7 @@ exports.obtenerPEA_NOPEA = (req, res) => {
 
   const queryPEAOcupada = `
     SELECT *
-    FROM BD_CENSO 
+    FROM bd_censo 
     WHERE distrito = CONCAT('DISTRITO ', ?) 
       AND contexto = 'Ocupada'
     LIMIT 3
@@ -137,7 +137,7 @@ exports.obtenerPEA_NOPEA = (req, res) => {
 
   const queryPEADesocupada = `
     SELECT *
-    FROM BD_CENSO 
+    FROM bd_censo 
     WHERE distrito = CONCAT('DISTRITO ', ?) 
       AND contexto = 'Desocupada'
     LIMIT 3
