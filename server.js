@@ -7,6 +7,17 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+const pool = require("./db");
+// Probar conexión al iniciar
+(async () => {
+  try {
+    const connection = await pool.getConnection();
+    console.log("Conectado a MySQL");
+    connection.release(); // devolver conexión al pool
+  } catch (err) {
+    console.error("Error conectando a MySQL:", err);
+  }
+})();
 
 // Rutas
 const poblacionRoutes = require("./routes/poblacion");
