@@ -7,6 +7,6 @@ router.get("/pet", poblacionController.obtenerCPP_PET);
 router.get("/pea_nopea", poblacionController.obtenerPEA_NOPEA);
 
 
-router.post("/", poblacionController.crearUsuario);
+// router.post("/", poblacionController.crearUsuario);
 
 module.exports = router;
